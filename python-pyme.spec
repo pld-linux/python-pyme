@@ -3,7 +3,7 @@ Summary:	The GPGME Interface for Python
 Summary(pl):	Interfejs do GPGME dla jêzyka Python
 Name:		python-%{module}
 Version:	0.5.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 #Source0:	http://gopher.quux.org:70/devel/pyme/pyme_0.5.1.tar.gz
@@ -12,7 +12,7 @@ Source0:	http://gopher.quux.org:70/devel/%{module}/%{module}_%{version}.tar.gz
 URL:		http://gopher.quux.org:70/devel/pyme/
 BuildRequires:	gpgme-devel
 BuildRequires:	python-devel
-Requires:	python-modules
+%pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
