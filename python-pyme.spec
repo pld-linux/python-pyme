@@ -9,6 +9,7 @@ License:	GPL
 Group:		Libraries/Python
 #Source0:	http://gopher.quux.org:70/devel/pyme/pyme_0.5.1.tar.gz
 Source0:	http://gopher.quux.org:70/devel/%{module}/%{module}_%{version}.tar.gz
+# Source0-md5:	9acad88702fcfe025be046fe672a468a
 URL:		http://gopher.quux.org:70/devel/pyme
 BuildRequires:	gpgme-devel
 BuildRequires:	python-devel
