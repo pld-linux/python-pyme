@@ -1,5 +1,5 @@
 %include	/usr/lib/rpm/macros.python
-%define 	module pyme
+%define 	module	pyme
 Summary:	The GPGME Interface for Python
 Summary(pl):	Interfejs do GPGME dla jêzyka Python
 Name:		python-%{module}
@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Pyme is, for the most part, a direct interface to the C GPGME library.
-However, it is re-packaged in a more Pythonic way -- object-oriented
+However, it is re-packaged in a more Pythonic way - object-oriented
 with classes and modules.
 
 %description -l pl
