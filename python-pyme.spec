@@ -2,12 +2,12 @@
 Summary:	The GPGME Interface for Python
 Summary(pl):	Interfejs do GPGME dla jêzyka Python
 Name:		python-%{module}
-Version:	0.6.0
+Version:	0.6.2
 Release:	1
 License:	GPL v2+
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pyme/pyme-%{version}.tar.gz
-# Source0-md5:	3f48cc14e9b7bc82d09a66ed05b54db7
+# Source0-md5:	443f96c00326ae8c4119cd7a6352eaf0
 URL:		http://pyme.sourceforge.net/
 BuildRequires:	gpgme-devel >= 1:0.4.5
 BuildRequires:	python-devel
@@ -30,7 +30,8 @@ pythonowy sposób - zorientowany obiektowo z klasami i modu³ami.
 
 %build
 export CFLAGS="%{rpmcflags}"
-%{__make} swig
+%{__make} swig \
+	PYTHON=python
 python setup.py build
 
 %install
