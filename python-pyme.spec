@@ -31,7 +31,7 @@ pythonowy sposób - zorientowany obiektowo z klasami i modu³ami.
 
 %build
 CFLAGS="%{rpmcflags}"
-export CLFAGS
+export CFLAGS
 # python setup.py # build, or what ?
 
 %install
