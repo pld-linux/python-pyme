@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 %define 	module	pyme
 Summary:	The GPGME Interface for Python
 Summary(pl):	Interfejs do GPGME dla jêzyka Python
