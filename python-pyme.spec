@@ -2,16 +2,16 @@
 Summary:	The GPGME Interface for Python
 Summary(pl):	Interfejs do GPGME dla jêzyka Python
 Name:		python-%{module}
-Version:	0.5.1
-Release:	2
-License:	GPL
+Version:	0.6.0
+Release:	1
+License:	GPL v2+
 Group:		Libraries/Python
-#Source0:	http://gopher.quux.org:70/devel/pyme/pyme_0.5.1.tar.gz
-Source0:	http://gopher.quux.org:70/devel/%{module}/%{module}_%{version}.tar.gz
-# Source0-md5:	9acad88702fcfe025be046fe672a468a
-URL:		http://gopher.quux.org:70/devel/pyme/
-BuildRequires:	gpgme-devel
+Source0:	http://dl.sourceforge.net/pyme/pyme-%{version}.tar.gz
+# Source0-md5:	3f48cc14e9b7bc82d09a66ed05b54db7
+URL:		http://pyme.sourceforge.net/
+BuildRequires:	gpgme-devel >= 1:0.4.5
 BuildRequires:	python-devel
+BuildRequires:	swig
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,25 +29,26 @@ pythonowy sposób - zorientowany obiektowo z klasami i modu³ami.
 %setup -q -n %{module}-%{version}
 
 %build
-CFLAGS="%{rpmcflags}"
-export CFLAGS
-# python setup.py # build, or what ?
+export CFLAGS="%{rpmcflags}"
+%{__make} swig
+python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{py_sitedir}
 
 python setup.py install \
-	--root=$RPM_BUILD_ROOT --optimize=2
+	--root=$RPM_BUILD_ROOT \
+	--optimize=2
 
-find $RPM_BUILD_ROOT%{py_sitedir} -name \*.py -exec rm {} \;
+find $RPM_BUILD_ROOT%{py_sitedir} -name '*.py' | xargs rm -f
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-#%doc CREDITS ChangeLog README doc
-#%{py_sitedir}/%{module}/*.so
-#%{py_sitedir}/%{module}/*.py?
-%{py_sitedir}/%{module}
+%doc ChangeLog 
+%dir %{py_sitedir}/pyme
+%attr(755,root,root) %{py_sitedir}/pyme/_gpgme.so
+%{py_sitedir}/pyme/*.py[co]
+%{py_sitedir}/pyme/constants
