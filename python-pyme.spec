@@ -2,12 +2,12 @@
 Summary:	The GPGME Interface for Python
 Summary(pl):	Interfejs do GPGME dla jêzyka Python
 Name:		python-%{module}
-Version:	0.6.2
+Version:	0.7.0
 Release:	1
-License:	GPL v2+
+License:	LGPL v2.1+
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pyme/pyme-%{version}.tar.gz
-# Source0-md5:	443f96c00326ae8c4119cd7a6352eaf0
+# Source0-md5:	94ec22f7f4babc5b1e9f0af8d73f05e0
 URL:		http://pyme.sourceforge.net/
 BuildRequires:	gpgme-devel >= 1:0.4.5
 BuildRequires:	python-devel
