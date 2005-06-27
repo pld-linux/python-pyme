@@ -11,7 +11,7 @@ Source0:	http://dl.sourceforge.net/pyme/pyme-%{version}.tar.gz
 URL:		http://pyme.sourceforge.net/
 BuildRequires:	gpgme-devel >= 1:0.4.5
 BuildRequires:	python-devel
-BuildRequires:	swig
+BuildRequires:	swig-python >= 1.3.25
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
