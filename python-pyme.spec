@@ -1,6 +1,6 @@
 %define 	module	pyme
 Summary:	The GPGME Interface for Python
-Summary(pl):	Interfejs do GPGME dla jêzyka Python
+Summary(pl.UTF-8):   Interfejs do GPGME dla jÄ™zyka Python
 Name:		python-%{module}
 Version:	0.7.0
 Release:	1
@@ -20,10 +20,10 @@ Pyme is, for the most part, a direct interface to the C GPGME library.
 However, it is re-packaged in a more Pythonic way - object-oriented
 with classes and modules.
 
-%description -l pl
-Pyme jest, w sporej czê¶ci, bezpo¶rednim interfejsem do napisanej w
-jêzyku C biblioteki GPGME. Jednak¿e jest ona spakietowana w bardziej
-pythonowy sposób - zorientowany obiektowo z klasami i modu³ami.
+%description -l pl.UTF-8
+Pyme jest, w sporej czÄ™Å›ci, bezpoÅ›rednim interfejsem do napisanej w
+jÄ™zyku C biblioteki GPGME. JednakÅ¼e jest ona spakietowana w bardziej
+pythonowy sposÃ³b - zorientowany obiektowo z klasami i moduÅ‚ami.
 
 %prep
 %setup -q -n %{module}-%{version}
