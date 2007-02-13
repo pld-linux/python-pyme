@@ -1,6 +1,6 @@
 %define 	module	pyme
 Summary:	The GPGME Interface for Python
-Summary(pl.UTF-8):   Interfejs do GPGME dla języka Python
+Summary(pl.UTF-8):	Interfejs do GPGME dla języka Python
 Name:		python-%{module}
 Version:	0.7.0
 Release:	1
