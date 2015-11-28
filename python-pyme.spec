@@ -32,14 +32,12 @@ pythonowy sposób - zorientowany obiektowo z klasami i modułami.
 export CFLAGS="%{rpmcflags}"
 %{__make} swig \
 	PYTHON=python
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install \
-	--root=$RPM_BUILD_ROOT \
-	--optimize=2
+%py_install
 
 find $RPM_BUILD_ROOT%{py_sitedir} -name '*.py' | xargs rm -f
 
