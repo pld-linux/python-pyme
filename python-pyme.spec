@@ -9,6 +9,7 @@ Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pyme/pyme-%{version}.tar.gz
 # Source0-md5:	94ec22f7f4babc5b1e9f0af8d73f05e0
 URL:		http://pyme.sourceforge.net/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	gpgme-devel >= 1:0.4.5
 BuildRequires:	python-devel
 BuildRequires:	swig-python >= 1.3.25
